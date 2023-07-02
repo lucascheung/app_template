@@ -1,0 +1,20 @@
+runtime: nodejs16  # Adjust the runtime version according to your Node.js version
+
+env: standard
+
+instance_class: F1
+
+handlers:
+- url: /static
+  static_dir: build/static/
+  secure: always
+
+- url: /(.*\.(json|ico|js|png|jpg|woff|woff2|ttf|otf|svg))
+  static_files: build/\1
+  upload: build/.*\.(json|ico|js|png|jpg|woff|woff2|ttf|otf|svg)
+  secure: always
+
+- url: /.*
+  static_files: build/index.html
+  upload: build/index.html
+  secure: always

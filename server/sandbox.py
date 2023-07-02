@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine, text
-from server.bootstrap import app
-from server.exts import db
-from server.seed import seed
-from server.common.constants import *
+from bootstrap import app
+from exts import db
+from seed import seed
+from common.constants import *
 
 sqlalchemy_init()
 # initiate DB

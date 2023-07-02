@@ -1,0 +1,13 @@
+runtime: python39  # Adjust the runtime version according to your Python version
+
+env: standard
+
+instance_class: F1
+
+service: server
+
+entrypoint: gunicorn -b :$PORT bootstrap:app
+
+handlers:
+- url: /.*
+  script: auto

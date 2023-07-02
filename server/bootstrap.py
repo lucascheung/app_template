@@ -20,7 +20,7 @@ def init_app():
     app = Flask(__name__, static_url_path=f'/')       # instantiate the app
     app.config.from_object(__name__)                         # setup Flask config
     app.config.from_pyfile('config/flask_config.py')          # setup Flask config--Local Configs
-    init_db(app)                                              # initiate database
+    # init_db(app)                                              # initiate database
     CORS(app, resources={r'/*': {'origins': '*'}})            # enable CORS
     # gunicorn.init_flask(app)                              # enable gunicorn
     register_urlpatterns(app)                                 # setup routes

@@ -1,6 +1,6 @@
 import json
 from flask import jsonify, request
-from server.exts import db
+from exts import db
 
 
 # def get_tests():

@@ -5,7 +5,7 @@ from server.common.constants import *
 from server.controllers.views import (
     handle_error, ping_pong, index
 )
-# from server.controllers.tests import ()
+# from controllers.tests import ()
 
 url_patterns = [
     (f'/', index),

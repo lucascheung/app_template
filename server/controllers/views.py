@@ -1,5 +1,5 @@
 import json
-from flask import jsonify, request, send_from_directory
+from flask import jsonify, request, send_from_directory, redirect, render_template
 
 
 # sanity check routes
@@ -29,5 +29,6 @@ def ping_pong():
     return jsonify('pong!')
 
 def index():
-    return send_from_directory("static", "index.html")
+    # return send_from_directory("static", "index.html")
+    return redirect("https://storage.googleapis.com/testing_react_template/index.html")
 
